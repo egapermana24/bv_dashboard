@@ -2,6 +2,7 @@ import 'package:dashboard_bvgo/app_colors.dart';
 import 'package:dashboard_bvgo/widgets/header_article.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../bloc/dashboard_bloc.dart';
 import '../bloc/dashboard_event.dart';
 import '../bloc/dashboard_state.dart';
@@ -9,7 +10,7 @@ import '../widgets/status_card.dart';
 import '../widgets/article_list.dart';
 import '../widgets/logo_header.dart';
 import '../models/article.dart';
-import '../widgets/custom_bottom_navigation_bar.dart'; // Impor widget baru
+import '../widgets/custom_bottom_navigation_bar.dart';
 
 class DashboardScreen extends StatelessWidget {
   @override
@@ -42,12 +43,12 @@ class DashboardScreen extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                top: 50.0,
+                top: 40.0,
                 left: 0,
                 right: 0,
                 bottom: 0,
-                child: Image.asset(
-                  'assets/images/Background.png',
+                child: SvgPicture.asset(
+                  'assets/images/Background.svg',
                   fit: BoxFit.cover,
                 ),
               ),
@@ -55,8 +56,8 @@ class DashboardScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      AppColors.primaryColor,
-                      AppColors.cardColor.withOpacity(0.6),
+                      AppColors.primaryColor.withOpacity(0.6),
+                      AppColors.cardColor.withOpacity(0.9),
                       AppColors.cardColor,
                     ],
                     stops: [0.0, 0.5, 1.0],
@@ -96,8 +97,7 @@ class DashboardScreen extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar:
-            const CustomBottomNavigationBar(),
+        bottomNavigationBar: const CustomBottomNavigationBar(),
       ),
     );
   }

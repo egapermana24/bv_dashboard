@@ -13,15 +13,14 @@ class StatusCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white, // Warna latar belakang card
+        color: Colors.white,
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: AppColors.blueShadow
-                .withOpacity(0.2), // Warna dan opacity shadow
-            spreadRadius: 0, // Penyebaran shadow
-            blurRadius: 32, // Besarnya blur pada shadow
-            offset: Offset(0, 8), // Posisi shadow (x,y)
+            color: AppColors.blueShadow.withOpacity(0.2),
+            spreadRadius: 0,
+            blurRadius: 32,
+            offset: const Offset(0, 8),
           ),
         ],
       ),
@@ -30,7 +29,6 @@ class StatusCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Header "Today"
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width,
@@ -39,7 +37,7 @@ class StatusCard extends StatelessWidget {
                   color: AppColors.biruMuda,
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: Text(
+                child: const Text(
                   'Today',
                   style: TextStyle(
                     color: AppColors.primaryColor,

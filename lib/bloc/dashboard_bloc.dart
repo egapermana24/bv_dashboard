@@ -5,8 +5,7 @@ import 'dashboard_state.dart';
 class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
   DashboardBloc() : super(DashboardLoading()) {
     on<LoadDashboardEvent>((event, emit) {
-      // Mock data
-      emit(DashboardLoaded(checkIn: 2, inHouse: 0, checkOut: 2));
+      emit(const DashboardLoaded(checkIn: 2, inHouse: 0, checkOut: 2));
     });
   }
 }

@@ -7,7 +7,7 @@ class StatusItem extends StatelessWidget {
   final int count;
   final Color color;
   final Color colorLine;
-  final String svgIcon; // Ubah dari IconData ke String untuk path SVG
+  final String svgIcon; 
   final String subtitle;
   final Color cardColor;
 
@@ -17,7 +17,7 @@ class StatusItem extends StatelessWidget {
     required this.count,
     required this.color,
     required this.colorLine,
-    required this.svgIcon, // Ubah dari IconData ke String untuk path SVG
+    required this.svgIcon,
     required this.subtitle,
     this.cardColor = Colors.white,
   }) : super(key: key);
@@ -37,7 +37,6 @@ class StatusItem extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Bagian Angka dan Ikon
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -49,16 +48,15 @@ class StatusItem extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(width: 8),
+                  const SizedBox(width: 8),
                   SvgPicture.asset(
-                    svgIcon, // Path SVG icon// Warna SVG akan berubah sesuai dengan color
+                    svgIcon,
                     width: 24,
                     height: 24,
                   ),
                 ],
               ),
               const SizedBox(height: 8),
-              // Bagian Keterangan Status
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -73,14 +71,12 @@ class StatusItem extends StatelessWidget {
               ),
 
               const SizedBox(height: 2),
-              // Garis warna di bawah keterangan status
               Container(
                 height: 2,
                 width: double.infinity,
                 color: colorLine,
               ),
               const SizedBox(height: 2),
-              // Bagian Keterangan Ruangan
               Text(
                 subtitle,
                 style: const TextStyle(

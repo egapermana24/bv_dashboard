@@ -30,10 +30,10 @@ class HeaderWithIcon extends StatelessWidget {
                 width: 24,
                 height: 24,
               ),
-              const SizedBox(width: 8.0), // Memberi jarak antara ikon dan teks
+              const SizedBox(width: 8.0),
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   color: AppColors.biruTua,
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
@@ -45,7 +45,7 @@ class HeaderWithIcon extends StatelessWidget {
             onTap: onTap,
             child: Text(
               actionText,
-              style: TextStyle(
+              style: const TextStyle(
                 color: AppColors.primaryColor,
                 fontWeight: FontWeight.normal,
                 fontSize: 16,

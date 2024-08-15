@@ -14,23 +14,22 @@ class ArticleItem extends StatelessWidget {
       children: [
         ListTile(
           contentPadding:
-              const EdgeInsets.symmetric(vertical: 4.0, horizontal: 16.0),
+              const EdgeInsets.symmetric(vertical: 2.0, horizontal: 16.0),
           leading: Container(
-            width: 75, // Lebar
-            height: 75, // Tinggi
+            width: 75,
+            height: 75,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12), // Mengatur radius sudut
+              borderRadius: BorderRadius.circular(12),
               image: DecorationImage(
                 image: AssetImage(article.imageUrl),
                 fit: BoxFit.cover,
               ),
               boxShadow: [
                 BoxShadow(
-                  color: AppColors.blueShadow
-                      .withOpacity(0.2), // Warna shadow dengan opacity
-                  offset: Offset(0, 8), // Posisi shadow (x, y)
-                  blurRadius: 40, // Besar blur shadow
-                  spreadRadius: 0, // Jarak shadow dari border
+                  color: AppColors.blueShadow.withOpacity(0.2),
+                  offset: const Offset(0, 8),
+                  blurRadius: 40,
+                  spreadRadius: 0,
                 ),
               ],
             ),
@@ -40,13 +39,13 @@ class ArticleItem extends StatelessWidget {
             children: [
               Text(
                 article.date,
-                style: TextStyle(
+                style: const TextStyle(
                     color: AppColors.listDateColor, fontFamily: 'Roboto'),
               ),
               const SizedBox(height: 2),
               Text(
                 article.title,
-                style: TextStyle(
+                style: const TextStyle(
                   color: AppColors.listTextColor,
                   fontSize: 14,
                   fontFamily: 'Roboto',
@@ -57,7 +56,7 @@ class ArticleItem extends StatelessWidget {
           ),
           subtitle: Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               Container(
@@ -69,8 +68,8 @@ class ArticleItem extends StatelessWidget {
                 ),
                 child: Text(
                   article.type,
-                  style: TextStyle(
-                    color: const Color(0xFFE69E4C),
+                  style: const TextStyle(
+                    color: Color(0xFFE69E4C),
                     fontSize: 12,
                   ),
                 ),
@@ -80,8 +79,8 @@ class ArticleItem extends StatelessWidget {
         ),
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 16.0),
-          height: 1, // Ketebalan garis
-          color: AppColors.listLineColor, // Warna garis
+          height: 1,
+          color: AppColors.listLineColor,
         ),
       ],
     );
